@@ -1,4 +1,22 @@
 {
-  "users": [],
-  "posts": []
+  "users": [
+    {
+      "id": "1",
+      "name": "budi",
+      "username": "budi123",
+      "email": "budi123@gmail.com",
+      "password": "Budi*123"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "author": "budi123",
+      "content": "Hello World!",
+      "createdAt": "2025-03-13T20:16:27.000Z",
+      "likes": 0,
+      "likedBy": [],
+      "comments": []
+    }
+  ]
 }

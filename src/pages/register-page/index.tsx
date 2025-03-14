@@ -7,8 +7,8 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 const validationSchema = Yup.object({
-  firstname: Yup.string().min(3, "Minimal 3 karakter").required("Wajib diisi"),
-  lastname: Yup.string().required("Wajib diisi"),
+  name: Yup.string().min(3, "Minimal 3 karakter").required("Wajib diisi"),
+  username: Yup.string().required("Wajib diisi"),
   email: Yup.string().email("Email tidak valid").required("Wajib diisi"),
   password: Yup.string()
     .matches(
@@ -34,8 +34,8 @@ export default function RegisterPage() {
           <h2 className="text-2x1 font-bold mb-4">Register</h2>
           <Formik
             initialValues={{
-              firstname: "",
-              lastname: "",
+              name: "",
+              username: "",
               email: "",
               password: "",
             }}
@@ -55,24 +55,24 @@ export default function RegisterPage() {
             <Form>
               <Field
                 type="text"
-                name="firstname"
-                placeholder="First Name"
+                name="name"
+                placeholder="Name"
                 className="w-full p-2 border rounded mb-3"
               />
               <ErrorMessage
-                name="firstname"
+                name="name"
                 component="div"
                 className="text-red-500 text-sm"
               />
 
               <Field
                 type="text"
-                name="lastname"
-                placeholder="Last Name"
+                name="username"
+                placeholder="Username"
                 className="w-full p-2 border rounded mb-3"
               />
               <ErrorMessage
-                name="lastname"
+                name="username"
                 component="div"
                 className="text-red-500 text-sm"
               />
